@@ -1,0 +1,12 @@
+#tags_list {
+	padding-left: 0;
+	list-style: none;
+}
+
+	#tags_list li {
+		padding-bottom: 5px;
+	}
+
+		#tags_list li:last-child {
+			padding-bottom: 0;
+		}

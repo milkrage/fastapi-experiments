@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ title }}</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='css/core.css') }}">
+
+    {% block style %}{% endblock %}
+</head>
+
+<body>
+    <header>
+        <h1><a href="{{ request.url_for('home') }}">@milkrage</a></h1>
+
+        <nav>
+            <ul>
+                <li><a href="{{ request.url_for('home') }}">Home</a></li>
+                <li><a href="{{ request.url_for('get_posts') }}">Posts</a></li>
+                <li><a href="{{ request.url_for('get_tags') }}">Tags</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block main %}{% endblock %}
+    </main>
+</body>
+
+</html>
