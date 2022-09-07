@@ -11,8 +11,12 @@ def get_dsn(cfg: Config = Config()):
     )
 
 
-def get_engine():
-    return create_engine(get_dsn())
+def get_engine(cfg: Config = Config()):
+    return create_engine(
+        url=get_dsn(),
+        pool_pre_ping=True,
+        pool_recycle=cfg.db_pool_recycle,
+    )
 
 
 def get_session():

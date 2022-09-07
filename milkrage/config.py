@@ -19,3 +19,4 @@ class Config(BaseSettings):
     db_username: str = "root"
     db_password: str = "mysql"
     db_name: str = "milkrage"
+    db_pool_recycle: int = 3600

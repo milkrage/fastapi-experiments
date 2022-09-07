@@ -19,6 +19,10 @@ def create_app() -> FastAPI:
 
     app.mount("/static", static, name="static")
 
+    # Documentation is disabled because used Jinja template engine.
+    app.docs_url = None
+    app.redoc_url = None
+
     return app
 
 

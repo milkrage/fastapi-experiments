@@ -8,6 +8,6 @@
     <h2>{{ title }}</h2>
 
     <article>
-        {{ post.body }}
+        {{ post.body | safe }}
     </article>
 {% endblock %}

@@ -10,4 +10,6 @@ template = Jinja2Templates(config.templates_path)
 
 @router.get("/", name="home")
 def homepage(request: Request):
-    return template.TemplateResponse("home.html", context={"request": request})
+    return template.TemplateResponse(
+        "home.html", context={"request": request, "title": "Home"}
+    )
